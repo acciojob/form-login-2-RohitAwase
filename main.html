@@ -7,8 +7,42 @@
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
+<form id="myForm">
+
+    <label>First Name</label>
+    <input type="text" name="First Name">
+
+    <label>Last Name</label>
+    <input type="text" name="Last Name">
+
+    <label>Phone Number</label>
+    <input type="text" name="Phone Number">
+
+    <label>Email ID</label>
+    <input type="text" name="Email ID">
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<script>
+document.getElementById("myForm").onsubmit = function(event) {
+    event.preventDefault();
+
+    let firstName = document.getElementsByName("First Name")[0].value;
+    let lastName = document.getElementsByName("Last Name")[0].value;
+    let phone = document.getElementsByName("Phone Number")[0].value;
+    let email = document.getElementsByName("Email ID")[0].value;
+
+    alert(
+        "First Name " + firstName + "\n" +
+        "Last Name " + lastName + "\n" +
+        "Phone Number " + phone + "\n" +
+        "Email ID " + email
+    );
+};
+</script>
+	<script type="text/javascript" src="./script.js">
 </script>
 
 </body>
